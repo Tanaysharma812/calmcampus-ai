@@ -96,7 +96,7 @@ export default function Dashboard() {
               {userData.name?.[0] || "M"}
             </div>
             <div>
-              <h1 className="font-bold">MindConnect</h1>
+              <h1 className="font-bold">MindWell</h1>
               <p className="text-sm text-muted-foreground">
                 {isOnline ? "💻 Online Mode" : "🏫 Offline Mode"}
               </p>
