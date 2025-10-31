@@ -5,8 +5,11 @@ import { Resources } from "@/components/Resources";
 import { CounselorContact } from "@/components/CounselorContact";
 import { Heart, Menu } from "lucide-react";
 import heroImage from "@/assets/hero-mental-health.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -38,7 +41,12 @@ const Index = () => {
             </Button>
           </div>
 
-          <Button variant="calm" size="lg" className="hidden md:flex">
+          <Button 
+            variant="calm" 
+            size="lg" 
+            className="hidden md:flex"
+            onClick={() => navigate("/onboarding")}
+          >
             Get Started
           </Button>
 
@@ -73,9 +81,9 @@ const Index = () => {
               variant="calm" 
               size="lg" 
               className="text-lg px-8"
-              onClick={() => scrollToSection("mood-tracker")}
+              onClick={() => navigate("/onboarding")}
             >
-              Track Your Mood
+              Get Started with MindConnect →
             </Button>
             <Button 
               variant="outline" 
